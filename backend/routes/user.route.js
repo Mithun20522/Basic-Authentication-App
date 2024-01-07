@@ -1,11 +1,8 @@
 import express from "express";
+import { userController } from "../controllers/user.controller.js";
 
 const userRouter = express.Router()
 
-userRouter.get('/', (req , res) => {
-    res.json({
-        message: 'API is working fine from route.'
-    })
-})
+userRouter.get('/', userController)
 
 export default userRouter
